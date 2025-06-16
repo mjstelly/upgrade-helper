@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Select from './Select'
+import Select from '../../../components/common/Select'
 
 it('renders without crashing', () => {
   const { container } = render(
@@ -16,11 +16,13 @@ it('renders without crashing', () => {
       <div
         class="css-1ago99h"
       >
-        <h4>
+        <h5
+          class="ant-typography css-dev-only-do-not-override-1rqnfsa"
+        >
           The title
-        </h4>
+        </h5>
         <div
-          class="ant-select css-1ago99h ant-select-lg ant-select-single ant-select-show-arrow"
+          class="ant-select ant-select-lg ant-select-outlined css-1ago99h css-dev-only-do-not-override-1rqnfsa ant-select-single ant-select-show-arrow"
         >
           <div
             class="ant-select-selector"
@@ -29,9 +31,9 @@ it('renders without crashing', () => {
               class="ant-select-selection-search"
             >
               <input
-                aria-activedescendant="rc_select_TEST_OR_SSR_list_0"
                 aria-autocomplete="list"
                 aria-controls="rc_select_TEST_OR_SSR_list"
+                aria-expanded="false"
                 aria-haspopup="listbox"
                 aria-owns="rc_select_TEST_OR_SSR_list"
                 autocomplete="off"
@@ -40,11 +42,14 @@ it('renders without crashing', () => {
                 readonly=""
                 role="combobox"
                 style="opacity: 0;"
+                type="search"
+                unselectable="on"
                 value=""
               />
             </span>
             <span
               class="ant-select-selection-item"
+              title="one option"
             >
               one option
             </span>
@@ -57,12 +62,11 @@ it('renders without crashing', () => {
           >
             <span
               aria-label="down"
-              class="anticon anticon-down"
+              class="anticon anticon-down ant-select-suffix"
               role="img"
             >
               <svg
                 aria-hidden="true"
-                class=""
                 data-icon="down"
                 fill="currentColor"
                 focusable="false"
